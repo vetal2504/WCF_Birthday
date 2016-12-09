@@ -1,0 +1,9 @@
+D:\Visual Studio 2015\Projects\BirthdayService\BirthdayService\bin\Debug\BirthdayService.exe.config
+D:\Visual Studio 2015\Projects\BirthdayService\BirthdayService\bin\Debug\BirthdayService.exe
+D:\Visual Studio 2015\Projects\BirthdayService\BirthdayService\bin\Debug\BirthdayService.pdb
+D:\Visual Studio 2015\Projects\BirthdayService\BirthdayService\obj\Debug\BirthdayService.csprojResolveAssemblyReference.cache
+D:\Visual Studio 2015\Projects\BirthdayService\BirthdayService\obj\Debug\BirthdayService.ClientForm.resources
+D:\Visual Studio 2015\Projects\BirthdayService\BirthdayService\obj\Debug\BirthdayService.Properties.Resources.resources
+D:\Visual Studio 2015\Projects\BirthdayService\BirthdayService\obj\Debug\BirthdayService.csproj.GenerateResource.Cache
+D:\Visual Studio 2015\Projects\BirthdayService\BirthdayService\obj\Debug\BirthdayService.exe
+D:\Visual Studio 2015\Projects\BirthdayService\BirthdayService\obj\Debug\BirthdayService.pdb
