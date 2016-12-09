@@ -7,3 +7,4 @@ D:\Visual Studio 2015\Projects\BirthdayService\BirthdayService\obj\Debug\Birthda
 D:\Visual Studio 2015\Projects\BirthdayService\BirthdayService\obj\Debug\BirthdayService.csproj.GenerateResource.Cache
 D:\Visual Studio 2015\Projects\BirthdayService\BirthdayService\obj\Debug\BirthdayService.exe
 D:\Visual Studio 2015\Projects\BirthdayService\BirthdayService\obj\Debug\BirthdayService.pdb
+D:\Visual Studio 2015\Projects\BirthdayService\BirthdayService\obj\Debug\BirthdayService.AddPerson.resources

@@ -32,6 +32,5 @@ D:\Visual Studio 2015\Projects\BirthdayService\WebService\bin\Microsoft.AI.Web.x
 D:\Visual Studio 2015\Projects\BirthdayService\WebService\bin\Microsoft.AI.WindowsServer.xml
 D:\Visual Studio 2015\Projects\BirthdayService\WebService\bin\Microsoft.ApplicationInsights.xml
 D:\Visual Studio 2015\Projects\BirthdayService\WebService\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\Visual Studio 2015\Projects\BirthdayService\WebService\obj\Debug\WebService.csprojResolveAssemblyReference.cache
 D:\Visual Studio 2015\Projects\BirthdayService\WebService\obj\Debug\WebService.dll
 D:\Visual Studio 2015\Projects\BirthdayService\WebService\obj\Debug\WebService.pdb

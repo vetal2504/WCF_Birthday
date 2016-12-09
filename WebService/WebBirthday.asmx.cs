@@ -32,5 +32,31 @@ namespace WebService
             }
             return temp;
         }
+
+        [WebMethod]
+        public object AddDataGridId()
+        {
+            int temp = 0;
+            using (PersonData db = new PersonData())
+            {
+                var id = from s in db.Persons select s.Id;
+                return id;
+            }
+
+            //return temp;
+        }
+
+        [WebMethod]
+        public object AddDataGridDate()
+        {
+            string temp = string.Empty;
+            using (PersonData db = new PersonData())
+            {
+                var date = from s in db.Persons select s.Date;
+                return date;
+            }
+
+            //return temp;
+        }
     }
 }

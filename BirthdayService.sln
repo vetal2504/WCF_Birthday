@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BirthdayService", "BirthdayService\BirthdayService.csproj", "{1B2BB0D8-3B5C-4869-8164-884D8EAAB190}"
+	ProjectSection(ProjectDependencies) = postProject
+		{EBE6412C-A5B4-412B-A4DB-DA17C3A629BD} = {EBE6412C-A5B4-412B-A4DB-DA17C3A629BD}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebService", "WebService\WebService.csproj", "{EBE6412C-A5B4-412B-A4DB-DA17C3A629BD}"
 EndProject

@@ -47,6 +47,7 @@
             this.addPerson.TabIndex = 0;
             this.addPerson.Text = "Add";
             this.addPerson.UseVisualStyleBackColor = true;
+            this.addPerson.Click += new System.EventHandler(this.addPerson_Click);
             // 
             // removePerson
             // 
@@ -108,6 +109,7 @@
             this.exitProgram.TabIndex = 4;
             this.exitProgram.Text = "Exit";
             this.exitProgram.UseVisualStyleBackColor = true;
+            this.exitProgram.Click += new System.EventHandler(this.exitProgram_Click);
             // 
             // ClientForm
             // 
