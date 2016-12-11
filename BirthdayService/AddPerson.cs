@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BirthdayService.BirthdayService.WebService;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,7 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BirthdayService.ServiceReferenceWeb;
+using WebService;
+using System.ServiceModel;
 
 namespace BirthdayService
 {
@@ -20,8 +22,12 @@ namespace BirthdayService
 
         private void button_add_Click(object sender, EventArgs e)
         {
-            var client = new WebBirthdaySoapClient();
-            client.AddData(textBox_name.Text, textBox_date.Text);
+            using (ServiceWCFClient client = new ServiceWCFClient())
+            {
+                client.Open();
+                client.DoAddData();
+                client.Close();
+            }
         }
     }
 }

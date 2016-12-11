@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BirthdayService;
-using BirthdayService.ServiceReferenceWeb;
+using System.ServiceModel;
 
 namespace BirthdayService
 {
@@ -17,6 +17,8 @@ namespace BirthdayService
         public ClientForm()
         {
             InitializeComponent();
+
+            AddDataGrid();
         }
 
         private void addPerson_Click(object sender, EventArgs e)
@@ -32,8 +34,9 @@ namespace BirthdayService
 
         private void AddDataGrid()
         {
-            var client = new WebBirthdaySoapClient();
-            //client.Ad
+            //ListViewItem item = new ListViewItem(new string[] { "1111", "2222", "3333"});
+            //listView1.Items.Add(item);
+
         }
     }
 }
