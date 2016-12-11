@@ -8,7 +8,7 @@ namespace WebService
 {
     public class PersonDb : DbContext
     {
-        public PersonDb() : base("DBConnection")
+        public PersonDb() : base("People")
         {
 
         }

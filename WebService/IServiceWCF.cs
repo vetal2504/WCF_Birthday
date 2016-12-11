@@ -15,6 +15,6 @@ namespace WebService
         void DoShowData();
 
         [OperationContract]
-        void DoAddData();
+        void DoAddData(string date, string name);
     }
 }

@@ -63,7 +63,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service References\BirthdayService.WebService\Reference.cs">
+    <Compile Include="Service References\ServiceBD\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -92,8 +92,11 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Service References\BirthdayService.WebService\ServiceWCF.wsdl" />
-    <None Include="Service References\BirthdayService.WebService\ServiceWCF.xsd">
+    <None Include="Service References\ServiceBD\ServiceWCF.wsdl" />
+    <None Include="Service References\ServiceBD\ServiceWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceBD\ServiceWCF1.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
@@ -110,19 +113,19 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Service References\BirthdayService.WebService\" />
+    <WCFMetadataStorage Include="Service References\ServiceBD\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\BirthdayService.WebService\ServiceWCF.disco" />
+    <None Include="Service References\ServiceBD\ServiceWCF.disco" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\BirthdayService.WebService\configuration91.svcinfo" />
+    <None Include="Service References\ServiceBD\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\BirthdayService.WebService\configuration.svcinfo" />
+    <None Include="Service References\ServiceBD\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\BirthdayService.WebService\Reference.svcmap">
+    <None Include="Service References\ServiceBD\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
