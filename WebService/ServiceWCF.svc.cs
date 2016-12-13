@@ -5,6 +5,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
 using System.Data.Entity;
+using System.Collections;
 
 namespace WebService
 {
@@ -12,6 +13,8 @@ namespace WebService
     // ПРИМЕЧАНИЕ. Чтобы запустить клиент проверки WCF для тестирования службы, выберите элементы ServiceWCF.svc или ServiceWCF.svc.cs в обозревателе решений и начните отладку.
     public class ServiceWCF : IServiceWCF
     {
+        //private IQueryable<Person> person;
+
         public void DoAddData(string date, string name)
         {
             using (PersonDb db = new PersonDb())
@@ -22,9 +25,18 @@ namespace WebService
             }
         }
 
-        public void DoShowData()
+        public List<Person> DoShowData()
         {
-            
+            List<Person> temp = new List<Person>();
+            using (PersonDb db = new PersonDb())
+            {
+                var person = from t in db.Persons where t.Name.Length > 0 select t;
+                foreach(Person t in person)
+                {
+                    temp.Add(t);
+                }
+            }
+            return temp;
         }
     }
 }

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BirthdayService;
+using BirthdayService.ServiceBD;
 using System.ServiceModel;
 
 namespace BirthdayService
@@ -34,6 +34,17 @@ namespace BirthdayService
 
         private void AddDataGrid()
         {
+            using (ServiceWCFClient client = new ServiceWCFClient())
+            {
+                client.Open();
+                List<WebService.Person> list = client.DoShowData();
+                foreach (var p in client.DoShowData)
+                {
+
+                }
+                listView1
+            }
+                    
             //ListViewItem item = new ListViewItem(new string[] { "1111", "2222", "3333"});
             //listView1.Items.Add(item);
 

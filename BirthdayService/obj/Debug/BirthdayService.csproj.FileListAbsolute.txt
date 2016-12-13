@@ -25,3 +25,4 @@ D:\visual studio 2015\Projects\BirthdayService\BirthdayService\bin\Debug\WebServ
 D:\visual studio 2015\Projects\BirthdayService\BirthdayService\bin\Debug\EntityFramework.dll
 D:\visual studio 2015\Projects\BirthdayService\BirthdayService\bin\Debug\WebService.pdb
 D:\visual studio 2015\Projects\BirthdayService\BirthdayService\bin\Debug\EntityFramework.xml
+D:\Visual Studio 2015\Projects\BirthdayService\BirthdayService\obj\Debug\BirthdayService.UpdateData.resources

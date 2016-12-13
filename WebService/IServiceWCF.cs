@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -12,7 +13,7 @@ namespace WebService
     public interface IServiceWCF
     {
         [OperationContract]
-        void DoShowData();
+        List<Person> DoShowData();
 
         [OperationContract]
         void DoAddData(string date, string name);
