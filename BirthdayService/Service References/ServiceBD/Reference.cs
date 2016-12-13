@@ -16,16 +16,22 @@ namespace BirthdayService.ServiceBD {
     public interface IServiceWCF {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceWCF/DoShowData", ReplyAction="http://tempuri.org/IServiceWCF/DoShowDataResponse")]
-        void DoShowData();
+        WebService.Person[] DoShowData();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceWCF/DoShowData", ReplyAction="http://tempuri.org/IServiceWCF/DoShowDataResponse")]
-        System.Threading.Tasks.Task DoShowDataAsync();
+        System.Threading.Tasks.Task<WebService.Person[]> DoShowDataAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceWCF/DoAddData", ReplyAction="http://tempuri.org/IServiceWCF/DoAddDataResponse")]
         void DoAddData(string date, string name);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceWCF/DoAddData", ReplyAction="http://tempuri.org/IServiceWCF/DoAddDataResponse")]
         System.Threading.Tasks.Task DoAddDataAsync(string date, string name);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceWCF/DoRemoveData", ReplyAction="http://tempuri.org/IServiceWCF/DoRemoveDataResponse")]
+        void DoRemoveData(string name);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceWCF/DoRemoveData", ReplyAction="http://tempuri.org/IServiceWCF/DoRemoveDataResponse")]
+        System.Threading.Tasks.Task DoRemoveDataAsync(string name);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -55,11 +61,11 @@ namespace BirthdayService.ServiceBD {
                 base(binding, remoteAddress) {
         }
         
-        public void DoShowData() {
-            base.Channel.DoShowData();
+        public WebService.Person[] DoShowData() {
+            return base.Channel.DoShowData();
         }
         
-        public System.Threading.Tasks.Task DoShowDataAsync() {
+        public System.Threading.Tasks.Task<WebService.Person[]> DoShowDataAsync() {
             return base.Channel.DoShowDataAsync();
         }
         
@@ -69,6 +75,14 @@ namespace BirthdayService.ServiceBD {
         
         public System.Threading.Tasks.Task DoAddDataAsync(string date, string name) {
             return base.Channel.DoAddDataAsync(date, name);
+        }
+        
+        public void DoRemoveData(string name) {
+            base.Channel.DoRemoveData(name);
+        }
+        
+        public System.Threading.Tasks.Task DoRemoveDataAsync(string name) {
+            return base.Channel.DoRemoveDataAsync(name);
         }
     }
 }

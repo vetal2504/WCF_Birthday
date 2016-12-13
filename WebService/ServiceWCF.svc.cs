@@ -25,6 +25,21 @@ namespace WebService
             }
         }
 
+        public void DoRemoveData(string name)
+        {
+            using (PersonDb db = new PersonDb())
+            {
+                foreach(Person man in db.Persons)
+                {
+                    if(man.Name == name || man.Id == int.Parse(name) || man.Date == name)
+                    {
+                        db.Persons.Remove(man);
+                    }
+                }
+                db.SaveChanges();
+            }
+        }
+
         public List<Person> DoShowData()
         {
             List<Person> temp = new List<Person>();

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BirthdayService.ServiceBD;
 using System.ServiceModel;
+using WebService;
 
 namespace BirthdayService
 {
@@ -37,17 +38,60 @@ namespace BirthdayService
             using (ServiceWCFClient client = new ServiceWCFClient())
             {
                 client.Open();
-                List<WebService.Person> list = client.DoShowData();
-                foreach (var p in client.DoShowData)
+
+                Person[] list = client.DoShowData();
+                foreach (var p in list)
                 {
-
+                    ListViewItem item = new ListViewItem();
+                    ListViewItem.ListViewSubItem subItem = new ListViewItem.ListViewSubItem();
+                    ListViewItem.ListViewSubItem subItemNext = new ListViewItem.ListViewSubItem();
+                    item.Text = p.Id.ToString();
+                    subItem.Text = p.Date;
+                    subItemNext.Text = p.Name;
+                    item.SubItems.Add(subItemNext);
+                    item.SubItems.Add(subItem);
+                    listView1.Items.Add(item);
                 }
-                listView1
-            }
-                    
-            //ListViewItem item = new ListViewItem(new string[] { "1111", "2222", "3333"});
-            //listView1.Items.Add(item);
 
+                client.Close();
+            }
+
+        }
+
+        private void updatePerson_Click(object sender, EventArgs e)
+        {
+            UpdateData update = new UpdateData();
+            update.ShowDialog();
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            for(int i = 0; i < listView1.Items.Count; i++)
+            {
+                listView1.Items[i].Remove();
+                i--;
+            }
+            AddDataGrid();
+        }
+
+        private void removePerson_Click(object sender, EventArgs e)
+        {
+
+            using (ServiceWCFClient client = new ServiceWCFClient())
+            {
+                client.Open();
+                foreach (ListViewItem currentItem in listView1.SelectedItems)
+                {
+                    listView1.Items.Remove(currentItem);
+                    MessageBox.Show(currentItem.Text.ToString());
+                    client.DoRemoveData(currentItem.Text);
+                }
+
+                client.Close();
+            }
+
+            
         }
     }
 }

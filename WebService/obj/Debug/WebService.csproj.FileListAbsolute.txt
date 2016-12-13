@@ -34,4 +34,3 @@ D:\visual studio 2015\Projects\BirthdayService\WebService\bin\Microsoft.Applicat
 D:\visual studio 2015\Projects\BirthdayService\WebService\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 D:\visual studio 2015\Projects\BirthdayService\WebService\obj\Debug\WebService.dll
 D:\visual studio 2015\Projects\BirthdayService\WebService\obj\Debug\WebService.pdb
-D:\Visual Studio 2015\Projects\BirthdayService\WebService\obj\Debug\WebService.csprojResolveAssemblyReference.cache

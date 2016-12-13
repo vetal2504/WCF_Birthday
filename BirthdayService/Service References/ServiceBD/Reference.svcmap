@@ -22,6 +22,7 @@
     <MetadataSource Address="http://localhost:17298/ServiceWCF.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
+    <MetadataFile FileName="ServiceWCF2.xsd" MetadataType="Schema" ID="a4d6114e-8d4b-40a5-883c-7e877256e1a4" SourceId="1" SourceUrl="http://localhost:17298/ServiceWCF.svc?xsd=xsd2" />
     <MetadataFile FileName="ServiceWCF.disco" MetadataType="Disco" ID="1f3fbf3b-4d9f-4028-a914-9f8d7f1cd682" SourceId="1" SourceUrl="http://localhost:17298/ServiceWCF.svc?disco" />
     <MetadataFile FileName="ServiceWCF.xsd" MetadataType="Schema" ID="d5784975-6467-4dd4-9245-7374f8ebd946" SourceId="1" SourceUrl="http://localhost:17298/ServiceWCF.svc?xsd=xsd0" />
     <MetadataFile FileName="ServiceWCF.wsdl" MetadataType="Wsdl" ID="76e7ed98-6dd6-40d5-91b9-5b2d04993e44" SourceId="1" SourceUrl="http://localhost:17298/ServiceWCF.svc?wsdl" />

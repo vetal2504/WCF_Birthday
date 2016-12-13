@@ -17,5 +17,8 @@ namespace WebService
 
         [OperationContract]
         void DoAddData(string date, string name);
+
+        [OperationContract]
+        void DoRemoveData(string name);
     }
 }
