@@ -126,12 +126,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IServiceWCF.cs" />
+    <Compile Include="Migrations\201612191713187_Init.cs" />
+    <Compile Include="Migrations\201612191713187_Init.Designer.cs">
+      <DependentUpon>201612191713187_Init.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="PersonDb.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServiceWCF.svc.cs">
       <DependentUpon>ServiceWCF.svc</DependentUpon>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201612191713187_Init.resx">
+      <DependentUpon>201612191713187_Init.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

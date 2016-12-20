@@ -10,7 +10,7 @@ namespace WebService
     {
         public PersonDb() : base("People")
         {
-
+            
         }
 
         public DbSet<Person> Persons { get; set; }

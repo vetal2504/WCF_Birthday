@@ -22,10 +22,10 @@ namespace BirthdayService.ServiceBD {
         System.Threading.Tasks.Task<WebService.Person[]> DoShowDataAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceWCF/DoAddData", ReplyAction="http://tempuri.org/IServiceWCF/DoAddDataResponse")]
-        void DoAddData(string date, string name);
+        void DoAddData(System.DateTime date, string name);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceWCF/DoAddData", ReplyAction="http://tempuri.org/IServiceWCF/DoAddDataResponse")]
-        System.Threading.Tasks.Task DoAddDataAsync(string date, string name);
+        System.Threading.Tasks.Task DoAddDataAsync(System.DateTime date, string name);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceWCF/DoRemoveData", ReplyAction="http://tempuri.org/IServiceWCF/DoRemoveDataResponse")]
         void DoRemoveData(string name);
@@ -69,11 +69,11 @@ namespace BirthdayService.ServiceBD {
             return base.Channel.DoShowDataAsync();
         }
         
-        public void DoAddData(string date, string name) {
+        public void DoAddData(System.DateTime date, string name) {
             base.Channel.DoAddData(date, name);
         }
         
-        public System.Threading.Tasks.Task DoAddDataAsync(string date, string name) {
+        public System.Threading.Tasks.Task DoAddDataAsync(System.DateTime date, string name) {
             return base.Channel.DoAddDataAsync(date, name);
         }
         

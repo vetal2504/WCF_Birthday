@@ -15,7 +15,7 @@ namespace WebService
     {
         //private IQueryable<Person> person;
 
-        public void DoAddData(string date, string name)
+        public void DoAddData(DateTime date, string name)
         {
             using (PersonDb db = new PersonDb())
             {
@@ -31,8 +31,9 @@ namespace WebService
             {
                 foreach(Person man in db.Persons)
                 {
-                    if(man.Name == name || man.Id == int.Parse(name) || man.Date == name)
-                    {
+                    //if(man.Name == name || man.Id == int.Parse(name) || man.Date == name)
+                    if (man.Name == name || man.Id == int.Parse(name))
+                        {
                         db.Persons.Remove(man);
                     }
                 }
@@ -45,11 +46,12 @@ namespace WebService
             List<Person> temp = new List<Person>();
             using (PersonDb db = new PersonDb())
             {
-                var person = from t in db.Persons where t.Name.Length > 0 select t;
-                foreach(Person t in person)
-                {
-                    temp.Add(t);
-                }
+                //var person = from t in db.Persons where t.Name.Length > 0 select t;
+                temp = db.Persons.Where(x => x.Name.Length > 0).ToList();
+                //foreach(Person t in person)
+                //{
+                //    temp.Add(t);
+                //}
             }
             return temp;
         }

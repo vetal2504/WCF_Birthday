@@ -43,14 +43,16 @@ namespace BirthdayService
                     if (String.Compare(p.Name, textBox1.Text) == 0)
                     {
                         p.Name = textBox1.Text;
-                        p.Date = textBox2.Text;
+                        p.Date = DateTime.Parse(textBox2.Text);
                     }
                     comboBox1.Items.Add(p.Name);
                 }
                 comboBox1.SelectedItem = list[0].Name;
-
+                ClientForm form = new ClientForm();
+                form.AddDataGrid();
                 client.Close();
             }
+
         }
 
         private void setComboBox()
@@ -65,8 +67,27 @@ namespace BirthdayService
                     comboBox1.Items.Add(p.Name);
                 }
                 comboBox1.SelectedItem = list[0].Name;
+                textBox1.Text = list[0].Date.ToString();
+                textBox2.Text = list[0].Name.ToString();
 
                 client.Close();
+            }
+        }
+
+        public string ReturnName()
+        {
+            return textBox2.Text;
+        }
+        public string ReturnDate()
+        {
+            return textBox1.Text;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if(button3.DialogResult == DialogResult.Cancel)
+            {
+                this.Close();
             }
         }
     }

@@ -25,7 +25,10 @@ namespace BirthdayService
         private void addPerson_Click(object sender, EventArgs e)
         {
             AddPerson newPerson = new AddPerson();
-            newPerson.ShowDialog();
+            if(newPerson.ShowDialog() == DialogResult.OK)
+            {
+                newPerson.ShowDialog();
+            }
         }
 
         private void exitProgram_Click(object sender, EventArgs e)
@@ -33,7 +36,7 @@ namespace BirthdayService
             Application.Exit();
         }
 
-        private void AddDataGrid()
+        public void AddDataGrid()
         {
             using (ServiceWCFClient client = new ServiceWCFClient())
             {
@@ -42,14 +45,14 @@ namespace BirthdayService
                 Person[] list = client.DoShowData();
                 foreach (var p in list)
                 {
-                    ListViewItem item = new ListViewItem();
-                    ListViewItem.ListViewSubItem subItem = new ListViewItem.ListViewSubItem();
-                    ListViewItem.ListViewSubItem subItemNext = new ListViewItem.ListViewSubItem();
-                    item.Text = p.Id.ToString();
-                    subItem.Text = p.Date;
-                    subItemNext.Text = p.Name;
-                    item.SubItems.Add(subItemNext);
-                    item.SubItems.Add(subItem);
+                    ListViewItem item = new ListViewItem(p.Id.ToString());
+                    //ListViewItem.ListViewSubItem subItem = new ListViewItem.ListViewSubItem();
+                    //ListViewItem.ListViewSubItem subItemNext = new ListViewItem.ListViewSubItem();
+                    //item.Text = p.Id.ToString();
+                    //subItem.Text = p.Date.ToString();
+                    //subItemNext.Text = p.Name;
+                    item.SubItems.Add(p.Date.ToString());
+                    item.SubItems.Add(p.Name);
                     listView1.Items.Add(item);
                 }
 
@@ -62,6 +65,37 @@ namespace BirthdayService
         {
             UpdateData update = new UpdateData();
             update.ShowDialog();
+            //using (ServiceWCFClient client = new ServiceWCFClient())
+            //{
+            //    client.Open();
+            //    foreach (ListViewItem currentItem in listView1.SelectedItems)
+            //    {
+
+            //        string count = currentItem.Text;
+            //        int number = int.Parse(count);
+                    
+
+
+            //        listView1.Items.Remove(currentItem);
+            //        MessageBox.Show(currentItem.Text.ToString());
+            //        client.DoRemoveData(currentItem.Text);
+
+            //        //listView1.Items.Add(number.ToString(), number);
+            //        ListViewItem item = new ListViewItem();
+            //        ListViewItem.ListViewSubItem subItem = new ListViewItem.ListViewSubItem();
+            //        ListViewItem.ListViewSubItem subItemNext = new ListViewItem.ListViewSubItem();
+            //        item.Text = number.ToString();
+            //        subItem.Text = update.ReturnDate();
+            //        subItemNext.Text = update.ReturnName();
+            //        item.SubItems.Add(subItem);
+            //        item.SubItems.Add(subItemNext);
+            //        listView1.Items.Add(item);
+
+            //        client.DoAddData(DateTime.Parse(update.ReturnDate()), update.ReturnName());
+            //    }
+
+            //    client.Close();
+            //}
 
         }
 
@@ -93,5 +127,6 @@ namespace BirthdayService
 
             
         }
+
     }
 }

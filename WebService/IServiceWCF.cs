@@ -16,7 +16,7 @@ namespace WebService
         List<Person> DoShowData();
 
         [OperationContract]
-        void DoAddData(string date, string name);
+        void DoAddData(DateTime date, string name);
 
         [OperationContract]
         void DoRemoveData(string name);

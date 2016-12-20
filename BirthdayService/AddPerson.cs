@@ -24,8 +24,17 @@ namespace BirthdayService
             using (ServiceBD.ServiceWCFClient client = new ServiceBD.ServiceWCFClient())
             {
                 client.Open();
-                client.DoAddData(textBox_date.Text, textBox_name.Text);
+                client.DoAddData(dateTimePicker1.Value, textBox_name.Text);
                 client.Close();
+            }
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(button1.DialogResult == DialogResult.Cancel)
+            {
+                this.Close();
             }
         }
     }
